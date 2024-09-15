@@ -12,6 +12,7 @@ Example of a Next.js application that fetches data on the server and consumes a 
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Development](#development)
+- [API Testing](#api-testing)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
 - [License](#license)
@@ -197,6 +198,10 @@ Now you should have both the frontend and backend servers running locally.
     ```bash
     php artisan test
     ```
+
+## API Testing
+
+A Postman's collection is included to test the API. It uses environment variables, so you must create an environment with a variable called `base_url` (e. g. `localhost:8000`) that will be used for all the requests. There's a route for obtaining Laravel Sanctum's cookies that sets the cookies and creates another variable called `xsrf-token` that will be used on every request. This route must be used before and after logging in and before logging out (at least that's what the experience taught me).
 
 ## Troubleshooting
 

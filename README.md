@@ -74,7 +74,7 @@ This is just a reference because I created the project using the (almost) latest
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/nextjs-laravel-breeze.git
+    git clone https://github.com/carlos-talavera/nextjs-laravel-breeze.git
     cd nextjs-laravel-breeze/frontend
     ```
 

@@ -1,0 +1,76 @@
+@import url("../styles/theme.css");
+
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+
+  .btn {
+    @apply font-medium px-3 py-2 bg-teal-500 border-teal-500 text-white leading-tight rounded !important;
+  }
+
+  .btn-gray {
+    @apply px-3 py-2 bg-transparent border-gray-200 dark:border-gray-200/10 dark:text-light-900 text-gray-700 leading-tight border font-medium;
+  }
+
+  .card-wrapper {
+    @apply bg-light-900 dark:bg-zinc-900 shadow dark:border dark:border-slate-200/10;
+  }
+}
+
+.no-focus {
+  @apply focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 focus:ring-0 focus:ring-transparent focus:ring-offset-0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Hide scrollbar Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Custom classes for toaster */
+.bg-destructive {
+  @apply bg-red-500 text-light-850 !important;
+}
+
+.border-destructive {
+  @apply border-red-500 !important;
+}

@@ -7,6 +7,7 @@ Example of a Next.js application that fetches data on the server and consumes a 
 - [Features](#features)
 - [Motivation](#motivation)
 - [Custom auth cookie... why?](#custom-auth-cookie-why)
+- [Custom middlewares](#custom-middlewares)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
@@ -52,6 +53,10 @@ You don't actually have access to the information of the user because you can't 
 Therefore, the only logical conclusion was to create a cookie that was handled internally by Next.js that guaranteed a valid session and could be read by Next.js itself seamlessly. For this purpose, the `auth_user` cookie is created using the [jose package](https://www.npmjs.com/package/jose), which is a lightweight JWT library that works on the edge runtime, so it allows us to use it on the middleware without worrying for having or not the needed APIs to generate these tokens.
 
 This cookie is HttpOnly to (try) to provide a bit of security to the application, so accessing to it from the client requires an intermediate API Route Handler (clever, ha? Well, let me believe it's clever).
+
+## Custom middlewares
+
+Custom middlewares are also used to handle the conversion from camelCase to snake_case and viceversa (a middleware for the requests and a middleware for the responses). A detailed explanation is offered on [this article](https://dev.to/charliet1802/transforming-api-requests-and-responses-in-laravel-11-the-easy-way-21i5) that I wrote a while ago when I was dealing with this discrepancy in naming conventions.
 
 ## Requirements
 

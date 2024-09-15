@@ -1,3 +1,4 @@
+import MobileNav from "./MobileNav";
 import RefreshButton from "./RefreshButton";
 import ThemeSwitch from "./ThemeSwitch";
 import UserMenu from "./UserMenu";
@@ -9,7 +10,7 @@ const Navbar = () => {
         <RefreshButton />
         <ThemeSwitch />
         <UserMenu />
-        {/* <MobileNav /> */}
+        <MobileNav />
       </div>
     </nav>
   );

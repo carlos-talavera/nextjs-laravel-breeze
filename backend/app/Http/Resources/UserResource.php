@@ -20,7 +20,7 @@ class UserResource extends JsonResource
             'email' => $this->email,
             'emailVerifiedAt' => $this->email_verified_at,
             // Use camelCase so it matches the property on the frontend
-            // (since login isn't a GET request, the TransformApiResponse middleware isn't applied)
+            // (since login is a web route, instead of an api route, the TransformApiResponse middleware is not applied)
         ];
     }
 }
